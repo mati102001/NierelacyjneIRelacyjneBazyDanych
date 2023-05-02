@@ -1,0 +1,13 @@
+version: '3.1'
+services:
+  myapplication:
+    image: mongo
+    environment:
+      - MONGODB_CONNSTRING=mongodb://localhost:27017/db
+    ports:
+      - 27017:27017
+  mongodb:
+    image: mongo
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=db
+      - MONGO_INITDB_ROOT_PASSWORD=db
